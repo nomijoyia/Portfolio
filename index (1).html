@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noman Haider — Content Writer | SEO, E-commerce &amp; Brand Storytelling</title>
+<meta name="description" content="Noman Haider is a content writer specializing in SEO blog content, e-commerce product writing, and brand storytelling that helps brands rank, engage and convert.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --bg:#0B0E14;
+    --bg-soft:#0E121A;
+    --surface:#141A24;
+    --surface-2:#1A212D;
+    --border:rgba(243,241,234,0.09);
+    --border-strong:rgba(243,241,234,0.16);
+    --text:#F3F1EA;
+    --text-muted:#8C95A8;
+    --text-dim:#5C6577;
+    --accent:#E8A33D;
+    --accent-soft:rgba(232,163,61,0.14);
+    --accent-2:#5FD4C1;
+    --accent-2-soft:rgba(95,212,193,0.14);
+    --serif:'Fraunces', serif;
+    --sans:'Sora', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:'';
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(ellipse 700px 500px at 12% -5%, rgba(232,163,61,0.10), transparent 60%),
+      radial-gradient(ellipse 600px 500px at 95% 15%, rgba(95,212,193,0.08), transparent 60%),
+      radial-gradient(ellipse 800px 600px at 50% 100%, rgba(232,163,61,0.05), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px; position:relative; z-index:1;}
+  a{color:inherit; text-decoration:none;}
+  img,svg{display:block; max-width:100%;}
+  ul{list-style:none;}
+  button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}
+  h1,h2,h3{font-family:var(--serif); font-weight:600; letter-spacing:-0.01em;}
+
+  ::selection{background:var(--accent); color:#0B0E14;}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:'—';
+    color:var(--text-dim);
+  }
+
+  .section{padding:120px 0; position:relative;}
+  @media (max-width:768px){ .section{padding:80px 0;} }
+
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(28px,4vw,42px); line-height:1.15;}
+  .section-head p{color:var(--text-muted); margin-top:14px; font-size:16px; max-width:520px;}
+
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  .stagger > * { transition-delay: calc(var(--i, 0) * 90ms); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ============ NAV ============ */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    padding:20px 0;
+    transition:background 0.35s ease, border-color 0.35s ease, padding 0.35s ease;
+    border-bottom:1px solid transparent;
+  }
+  header.scrolled{
+    background:rgba(11,14,20,0.78);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+    padding:14px 0;
+  }
+  nav{display:flex; align-items:center; justify-content:space-between;}
+  .logo{
+    font-family:var(--serif); font-size:20px; font-weight:700;
+    display:flex; align-items:center; gap:8px;
+  }
+  .logo .dot{color:var(--accent);}
+  .nav-links{display:flex; gap:36px; align-items:center;}
+  .nav-links a{
+    font-size:14px; color:var(--text-muted); position:relative; padding:4px 0;
+    transition:color 0.25s ease;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:-2px; height:1px; width:0;
+    background:var(--accent); transition:width 0.3s ease;
+  }
+  .nav-links a:hover{color:var(--text);}
+  .nav-links a:hover::after{width:100%;}
+  .btn{
+    font-family:var(--sans); font-weight:600; font-size:13.5px;
+    padding:11px 22px; border-radius:30px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  }
+  .btn-primary{
+    background:var(--accent); color:#0B0E14;
+    box-shadow:0 0 0 0 rgba(232,163,61,0.5);
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px -8px rgba(232,163,61,0.55);}
+  .btn-ghost{
+    border:1px solid var(--border-strong); color:var(--text);
+  }
+  .btn-ghost:hover{background:var(--surface-2); transform:translateY(-2px);}
+  .nav-cta{display:none;}
+  @media (min-width:769px){ .nav-cta{display:inline-flex;} }
+
+  .burger{
+    display:flex; flex-direction:column; gap:5px; width:26px; z-index:101;
+  }
+  .burger span{height:2px; width:100%; background:var(--text); transition:all 0.3s ease;}
+  @media (min-width:769px){ .burger{display:none;} }
+  @media (max-width:768px){ .nav-links{display:none;} }
+
+  .mobile-menu{
+    position:fixed; inset:0; background:var(--bg); z-index:99;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:34px;
+    transform:translateY(-100%); transition:transform 0.45s cubic-bezier(.16,1,.3,1);
+  }
+  .mobile-menu.open{transform:translateY(0);}
+  .mobile-menu a{font-family:var(--serif); font-size:28px;}
+
+  /* ============ HERO ============ */
+  .hero{
+    min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+    padding-top:120px; padding-bottom:60px; position:relative;
+  }
+  .hero-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center;}
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
+
+  .hero h1{
+    font-size:clamp(38px,6vw,68px);
+    line-height:1.06;
+    letter-spacing:-0.015em;
+    font-weight:600;
+  }
+  .hero-badge{
+    display:inline-flex; align-items:center; gap:4px;
+    font-family:var(--mono); font-size:12.5px; color:var(--text-muted);
+    border:1px solid var(--border-strong); padding:8px 16px; border-radius:30px;
+    margin-bottom:22px; background:var(--surface);
+    opacity:0; animation:fadeUp 0.7s ease forwards; animation-delay:0s;
+  }
+  .hero h1 .line{display:block; overflow:hidden;}
+  .hero h1 .line span{display:inline-block; transform:translateY(110%); animation:lineUp 0.9s cubic-bezier(.16,1,.3,1) forwards;}
+  .hero h1 .line:nth-child(1) span{animation-delay:0.05s;}
+  .hero h1 .line:nth-child(2) span{animation-delay:0.18s;}
+  .hero h1 .line:nth-child(3) span{animation-delay:0.31s;}
+  @keyframes lineUp{ to{ transform:translateY(0); } }
+
+  .highlight{position:relative; white-space:nowrap; font-style:italic;}
+  .highlight::after{
+    content:''; position:absolute; left:-3px; right:-3px; bottom:2px; height:0.34em;
+    background:var(--accent-soft); border-radius:3px; z-index:-1;
+    transform:scaleX(0); transform-origin:left; animation:swipe 0.7s ease forwards;
+    animation-delay:1.1s;
+  }
+  @keyframes swipe{ to{ transform:scaleX(1); } }
+
+  .hero p.lead{
+    margin-top:24px; font-size:17px; color:var(--text-muted); max-width:480px;
+    opacity:0; animation:fadeUp 0.8s ease forwards; animation-delay:1.3s;
+  }
+  .hero-ctas{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;
+    opacity:0; animation:fadeUp 0.8s ease forwards; animation-delay:1.5s;}
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+
+  .stat-row{display:flex; gap:28px; margin-top:48px; flex-wrap:wrap;
+    opacity:0; animation:fadeUp 0.8s ease forwards; animation-delay:1.7s;}
+  .stat{font-family:var(--mono);}
+  .stat .num{font-size:26px; color:var(--text); font-weight:500; display:flex; align-items:baseline; gap:2px;}
+  .stat .num .accent-num{color:var(--accent);}
+  .stat .label{font-size:11.5px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.08em; margin-top:4px;}
+
+  .hero-card{
+    position:relative; border-radius:18px; border:1px solid var(--border);
+    background:linear-gradient(160deg, var(--surface), var(--surface-2));
+    padding:30px; opacity:0; animation:fadeUp 1s ease forwards; animation-delay:0.6s;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,0.6);
+  }
+  .hero-card .tape{
+    position:absolute; top:-14px; left:30px; width:64px; height:26px;
+    background:rgba(243,241,234,0.06); border:1px solid var(--border-strong);
+    transform:rotate(-3deg);
+  }
+  .hero-card-label{font-family:var(--mono); font-size:11px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px;}
+  .typewriter-line{
+    font-family:var(--mono); font-size:14.5px; color:var(--text-muted);
+    border-left:2px solid var(--accent); padding-left:14px; margin-bottom:14px; min-height:20px;
+  }
+  .typewriter-line .cursor{display:inline-block; width:7px; height:14px; background:var(--accent); margin-left:2px; animation:blink 1s steps(1) infinite; vertical-align:middle;}
+  @keyframes blink{ 50%{opacity:0;} }
+
+  .ticker-strip{
+    margin-top:80px; border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+    padding:18px 0; overflow:hidden; white-space:nowrap;
+  }
+  .ticker-track{display:inline-flex; gap:46px; animation:ticker 26s linear infinite;}
+  .ticker-track span{
+    font-family:var(--mono); font-size:13px; letter-spacing:0.08em; color:var(--text-dim);
+    text-transform:uppercase; display:inline-flex; align-items:center; gap:46px;
+  }
+  .ticker-track span::after{content:'◆'; color:var(--accent); font-size:9px; margin-left:46px;}
+  @keyframes ticker{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  .scroll-cue{
+    position:absolute; bottom:24px; left:50%; transform:translateX(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    color:var(--text-dim); font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em;
+  }
+  .scroll-cue .line{width:1px; height:28px; background:linear-gradient(var(--accent), transparent); animation:scrollDown 1.6s ease infinite;}
+  @keyframes scrollDown{ 0%{opacity:0; transform:scaleY(0.3);} 50%{opacity:1; transform:scaleY(1);} 100%{opacity:0; transform:scaleY(0.3);} }
+  @media (max-width:768px){ .scroll-cue{display:none;} }
+
+  /* ============ ABOUT ============ */
+  .about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:start;}
+  @media (max-width:900px){ .about-grid{grid-template-columns:1fr; gap:40px;} }
+
+  .avatar-block{position:relative;}
+  .avatar-card{
+    border-radius:20px; aspect-ratio:1/1.05; position:relative; overflow:hidden;
+    background:linear-gradient(150deg, #1A212D, #11151E);
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .avatar-emoji{
+    font-size:84px; line-height:1; position:relative; z-index:2;
+    filter:drop-shadow(0 18px 30px rgba(0,0,0,0.5));
+    animation:floaty 4s ease-in-out infinite;
+  }
+  @keyframes floaty{ 0%,100%{transform:translateY(0) rotate(-2deg);} 50%{transform:translateY(-14px) rotate(2deg);} }
+  .avatar-mono{
+    font-family:var(--serif); font-size:30px; font-weight:700; letter-spacing:0.02em;
+    margin-top:18px; position:relative; z-index:2;
+    color:var(--accent);
+    background:linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  }
+  .avatar-mono span{font-family:var(--mono); font-size:13px; color:var(--text-muted); -webkit-text-fill-color:var(--text-muted); display:block; margin-top:6px; font-weight:400; letter-spacing:0.05em;}
+  .float-chip{
+    position:absolute; font-size:22px; padding:10px; border-radius:14px;
+    background:rgba(20,26,36,0.85); border:1px solid var(--border-strong);
+    backdrop-filter:blur(6px); animation:chipFloat 5s ease-in-out infinite;
+  }
+  .float-chip.c1{top:14%; left:10%; animation-delay:0.2s;}
+  .float-chip.c2{top:20%; right:10%; animation-delay:1s; font-size:18px;}
+  .float-chip.c3{bottom:30%; left:8%; animation-delay:1.8s; font-size:18px;}
+  @keyframes chipFloat{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+  .avatar-card .glow{
+    position:absolute; width:260px; height:260px; border-radius:50%;
+    background:radial-gradient(circle, rgba(232,163,61,0.25), transparent 70%);
+    top:-60px; right:-60px; filter:blur(10px);
+  }
+  .avatar-card .badge{
+    position:absolute; bottom:18px; left:18px; right:18px;
+    background:rgba(11,14,20,0.7); border:1px solid var(--border-strong);
+    backdrop-filter:blur(8px); border-radius:12px; padding:14px 16px;
+    font-family:var(--mono); font-size:11.5px; color:var(--text-muted);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .avatar-card .badge b{color:var(--accent-2); font-weight:500;}
+  .pulse-dot{width:8px; height:8px; border-radius:50%; background:#5FE89A; display:inline-block; margin-right:6px; box-shadow:0 0 0 0 rgba(95,232,154,0.6); animation:pulse 1.8s infinite;}
+  @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(95,232,154,0.55);} 70%{box-shadow:0 0 0 8px rgba(95,232,154,0);} 100%{box-shadow:0 0 0 0 rgba(95,232,154,0);} }
+
+  .about-bio p{color:var(--text-muted); font-size:16px; margin-bottom:16px; max-width:560px;}
+  .about-bio p:first-of-type{color:var(--text); font-size:19px; font-family:var(--serif); line-height:1.5;}
+
+  .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
+  .pill{
+    font-family:var(--mono); font-size:12px; padding:8px 14px; border-radius:30px;
+    border:1px solid var(--border-strong); color:var(--text-muted);
+    transition:border-color 0.25s ease, color 0.25s ease;
+  }
+  .pill:hover{border-color:var(--accent); color:var(--text);}
+
+  /* ============ SERVICES ============ */
+  .services-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  @media (max-width:900px){ .services-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .services-grid{grid-template-columns:1fr;} }
+
+  .service-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    padding:28px 24px; position:relative; overflow:hidden;
+    transition:transform 0.35s cubic-bezier(.16,1,.3,1), border-color 0.35s ease, background 0.35s ease;
+  }
+  .service-card:hover{transform:translateY(-6px); border-color:var(--border-strong); background:var(--surface-2);}
+  .service-icon{
+    width:42px; height:42px; border-radius:10px; background:var(--accent-soft);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+  }
+  .service-icon svg{width:20px; height:20px; stroke:var(--accent);}
+  .service-card h3{font-size:18px; margin-bottom:10px;}
+  .service-card p{font-size:14px; color:var(--text-muted); line-height:1.55;}
+  .service-card .tag{
+    position:absolute; top:20px; right:20px; font-family:var(--mono); font-size:10px;
+    color:var(--text-dim); text-transform:uppercase;
+  }
+
+  /* ============ WORK / SAMPLES ============ */
+  .filter-row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px;}
+  .filter-btn{
+    font-family:var(--mono); font-size:12.5px; padding:9px 16px; border-radius:30px;
+    border:1px solid var(--border-strong); color:var(--text-muted);
+    transition:all 0.25s ease;
+  }
+  .filter-btn.active, .filter-btn:hover{background:var(--accent); color:#0B0E14; border-color:var(--accent);}
+
+  .samples-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  @media (max-width:768px){ .samples-grid{grid-template-columns:1fr;} }
+
+  .sample-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:4px 16px 16px 16px;
+    padding:30px 26px; cursor:pointer; position:relative;
+    transition:transform 0.35s cubic-bezier(.16,1,.3,1), box-shadow 0.35s ease, border-color 0.3s ease;
+    clip-path:polygon(0% 0%, calc(100% - 26px) 0%, 100% 26px, 100% 100%, 0% 100%);
+  }
+  .sample-card::before{
+    content:''; position:absolute; top:0; right:0; width:26px; height:26px;
+    background:var(--bg-soft); clip-path:polygon(0 0, 100% 0, 100% 100%);
+    transition:background 0.3s ease;
+  }
+  .sample-card:hover{transform:translateY(-5px) rotate(-0.3deg); border-color:var(--accent); box-shadow:0 24px 50px -28px rgba(0,0,0,0.7);}
+  .sample-card:hover::before{background:var(--accent);}
+  .sample-cat{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em;
+    color:var(--accent-2); margin-bottom:14px; display:inline-block;
+  }
+  .sample-card h3{font-size:21px; line-height:1.3; margin-bottom:12px;}
+  .sample-card p{font-size:14px; color:var(--text-muted); margin-bottom:20px;}
+  .sample-meta{display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); font-size:11.5px; color:var(--text-dim);}
+  .sample-meta .read{color:var(--text); display:flex; align-items:center; gap:6px;}
+  .sample-meta .read svg{width:13px; height:13px; stroke:var(--accent); transition:transform 0.25s ease;}
+  .sample-card:hover .read svg{transform:translateX(4px);}
+
+  /* ============ MODAL ============ */
+  .modal-backdrop{
+    position:fixed; inset:0; background:rgba(7,9,13,0.82); backdrop-filter:blur(6px);
+    z-index:200; display:flex; align-items:flex-start; justify-content:center;
+    padding:60px 20px; opacity:0; visibility:hidden; transition:opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y:auto;
+  }
+  .modal-backdrop.open{opacity:1; visibility:visible;}
+  .modal-box{
+    background:var(--bg-soft); border:1px solid var(--border-strong); border-radius:18px;
+    max-width:680px; width:100%; padding:48px 44px 56px; position:relative;
+    transform:scale(0.94) translateY(20px); transition:transform 0.35s cubic-bezier(.16,1,.3,1);
+  }
+  .modal-backdrop.open .modal-box{transform:scale(1) translateY(0);}
+  @media (max-width:600px){ .modal-box{padding:34px 22px 44px;} }
+  .modal-close{
+    position:absolute; top:20px; right:20px; width:36px; height:36px; border-radius:50%;
+    border:1px solid var(--border-strong); display:flex; align-items:center; justify-content:center;
+    transition:background 0.25s ease, transform 0.25s ease;
+  }
+  .modal-close:hover{background:var(--surface-2); transform:rotate(90deg);}
+  .modal-close svg{width:16px; height:16px; stroke:var(--text);}
+  .modal-cat{font-family:var(--mono); font-size:11.5px; color:var(--accent-2); text-transform:uppercase; letter-spacing:0.08em;}
+  .modal-box h2{font-size:clamp(24px,3.4vw,32px); margin:14px 0 6px; line-height:1.25;}
+  .modal-wc{font-family:var(--mono); font-size:11.5px; color:var(--text-dim); margin-bottom:28px;}
+  .article-body h4{font-family:var(--sans); font-size:15px; color:var(--accent); margin:26px 0 10px; text-transform:uppercase; letter-spacing:0.04em; font-weight:600;}
+  .article-body p{color:var(--text-muted); font-size:15.5px; line-height:1.75; margin-bottom:14px;}
+  .article-body p:first-of-type{color:var(--text); font-size:17px;}
+
+  /* ============ SIDE PROJECTS ============ */
+  .proj-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  @media (max-width:768px){ .proj-grid{grid-template-columns:1fr;} }
+  .proj-card{
+    border:1px solid var(--border); border-radius:16px; padding:30px; position:relative;
+    background:linear-gradient(160deg, var(--surface), transparent);
+    transition:border-color 0.3s ease, transform 0.3s ease;
+    overflow:hidden;
+  }
+  .proj-card:hover{transform:translateY(-4px); border-color:var(--accent-2);}
+  .proj-card .blob{
+    position:absolute; width:180px; height:180px; border-radius:50%; filter:blur(40px); opacity:0.25;
+    top:-60px; right:-60px;
+  }
+  .proj-card.p1 .blob{background:var(--accent);}
+  .proj-card.p2 .blob{background:var(--accent-2);}
+  .proj-card h3{font-size:19px; margin-bottom:10px; position:relative; z-index:1;}
+  .proj-card p{font-size:14px; color:var(--text-muted); margin-bottom:18px; position:relative; z-index:1;}
+  .proj-card a.link{font-family:var(--mono); font-size:12.5px; color:var(--accent-2); display:inline-flex; gap:6px; align-items:center; position:relative; z-index:1;}
+  .proj-card a.link svg{width:12px; height:12px; stroke:var(--accent-2);}
+
+  /* ============ PROCESS ============ */
+  .process-row{display:grid; grid-template-columns:repeat(3,1fr); gap:30px;}
+  @media (max-width:768px){ .process-row{grid-template-columns:1fr; gap:36px;} }
+  .process-step{position:relative; padding-left:0;}
+  .process-step .tag{font-family:var(--mono); font-size:12px; color:var(--text-dim); margin-bottom:10px;}
+  .process-step h3{font-size:19px; margin-bottom:10px;}
+  .process-step p{font-size:14.5px; color:var(--text-muted);}
+  .process-row .process-step:not(:last-child){border-bottom:1px solid var(--border); padding-bottom:30px;}
+  @media (min-width:769px){
+    .process-row .process-step:not(:last-child){border-bottom:none; border-right:1px solid var(--border); padding-right:30px; padding-bottom:0;}
+  }
+
+  /* ============ CONTACT ============ */
+  .contact-box{
+    border:1px solid var(--border); border-radius:24px; padding:64px;
+    background:linear-gradient(150deg, var(--surface), var(--bg-soft));
+    display:grid; grid-template-columns:1fr 1fr; gap:50px;
+    position:relative; overflow:hidden;
+  }
+  @media (max-width:860px){ .contact-box{grid-template-columns:1fr; padding:38px 26px;} }
+  .contact-box .glow{position:absolute; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle, rgba(232,163,61,0.12), transparent 70%); top:-120px; left:-120px;}
+  .contact-left h2{font-size:clamp(26px,3.6vw,38px); margin-bottom:16px;}
+  .contact-left p{color:var(--text-muted); font-size:15.5px; max-width:380px; margin-bottom:28px;}
+  .contact-direct{display:flex; flex-direction:column; gap:14px;}
+  .contact-direct a, .contact-direct button{
+    display:flex; align-items:center; gap:12px; font-size:14.5px; color:var(--text);
+    border:1px solid var(--border-strong); padding:12px 18px; border-radius:12px; width:fit-content;
+    transition:border-color 0.25s ease, background 0.25s ease;
+  }
+  .contact-direct a:hover, .contact-direct button:hover{border-color:var(--accent); background:var(--surface-2);}
+  .contact-direct svg{width:16px; height:16px; stroke:var(--accent);}
+
+  .form-field{margin-bottom:18px;}
+  .form-field label{font-family:var(--mono); font-size:11.5px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:8px;}
+  .form-field input, .form-field textarea{
+    width:100%; background:var(--bg-soft); border:1px solid var(--border-strong); border-radius:10px;
+    padding:13px 16px; color:var(--text); font-family:var(--sans); font-size:14.5px;
+    transition:border-color 0.25s ease;
+  }
+  .form-field input:focus, .form-field textarea:focus{outline:none; border-color:var(--accent);}
+  .form-field textarea{resize:vertical; min-height:100px;}
+  .submit-row{display:flex; align-items:center; gap:16px;}
+  .form-note{font-size:12px; color:var(--text-dim);}
+
+  footer{padding:40px 0; border-top:1px solid var(--border);}
+  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;}
+  .footer-row p{font-family:var(--mono); font-size:12px; color:var(--text-dim);}
+  .social-links{display:flex; gap:16px;}
+  .social-links a{width:36px; height:36px; border:1px solid var(--border-strong); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:border-color 0.25s ease, transform 0.25s ease;}
+  .social-links a:hover{border-color:var(--accent); transform:translateY(-3px);}
+  .social-links svg{width:16px; height:16px; stroke:var(--text-muted);}
+
+  .toast{
+    position:fixed; bottom:26px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--accent); color:#0B0E14; padding:12px 22px; border-radius:30px;
+    font-family:var(--mono); font-size:13px; opacity:0; pointer-events:none;
+    transition:opacity 0.3s ease, transform 0.3s ease; z-index:300;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <nav>
+      <a href="#home" class="logo">Noman<span class="dot">.</span>Haider</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Samples</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="btn btn-primary nav-cta">👋 Hire Me</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mlink">About</a>
+  <a href="#services" class="mlink">Services</a>
+  <a href="#work" class="mlink">Samples</a>
+  <a href="#projects" class="mlink">Projects</a>
+  <a href="#contact" class="mlink">Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> Open for new projects · Replies within 24h ⚡
+        </div>
+        <h1>
+          <span class="line"><span>Words that</span></span>
+          <span class="line"><span>help brands <em class="highlight">rank</em>,</span></span>
+          <span class="line"><span>engage &amp; <em class="highlight">convert</em>.</span></span>
+        </h1>
+        <p class="lead">Most "content writers" hand you generic, AI-flavored filler. I'm Noman Haider — I research the niche, write like a human talking to a human, and structure every piece so it actually ranks <em>and</em> reads well. 🎯</p>
+        <div class="hero-ctas">
+          <a href="#work" class="btn btn-primary">📂 View Writing Samples</a>
+          <a href="#contact" class="btn btn-ghost">💬 Let's Talk</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="num"><span class="counter accent-num" data-target="50">0</span>+</div>
+            <div class="label">📄 Articles Written</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span class="counter accent-num" data-target="12">0</span>+</div>
+            <div class="label">🧩 Niches Covered</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span class="counter accent-num" data-target="3">0</span></div>
+            <div class="label">🚀 Live Web Tools Built</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="tape"></div>
+        <div class="hero-card-label">// currently writing</div>
+        <div class="typewriter-line"><span id="typeTarget"></span><span class="cursor"></span></div>
+        <div style="margin-top:22px; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; justify-content:space-between; font-family:var(--mono); font-size:12px; color:var(--text-dim);">
+            <span>📝 SEO Blog Writing</span><span style="color:var(--accent-2);">●</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-family:var(--mono); font-size:12px; color:var(--text-dim);">
+            <span>🛍️ E-commerce Product Content</span><span style="color:var(--accent-2);">●</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-family:var(--mono); font-size:12px; color:var(--text-dim);">
+            <span>🎙️ Brand Storytelling</span><span style="color:var(--accent-2);">●</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-family:var(--mono); font-size:12px; color:var(--text-dim);">
+            <span>🧭 Article Outlines &amp; Strategy</span><span style="color:var(--accent-2);">●</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker-strip">
+    <div class="ticker-track" id="tickerTrack">
+      <span>SEO BLOG WRITING</span><span>E-COMMERCE COPY</span><span>BRAND STORYTELLING</span><span>PRODUCT DESCRIPTIONS</span><span>ARTICLE OUTLINES</span><span>BUYING GUIDES</span>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span>SCROLL</span><div class="line"></div></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="avatar-block reveal">
+        <div class="avatar-card">
+          <div class="glow"></div>
+          <span class="float-chip c1">✍️</span>
+          <span class="float-chip c2">📈</span>
+          <span class="float-chip c3">🛍️</span>
+          <div style="display:flex; flex-direction:column; align-items:center;">
+            <span class="avatar-emoji">📝</span>
+            <div class="avatar-mono">Noman Haider<span>Content Writer &amp; SEO Strategist</span></div>
+          </div>
+          <div class="badge"><span><span class="pulse-dot"></span>Available for projects</span><b>🇵🇰 Pakistan</b></div>
+        </div>
+      </div>
+      <div class="about-bio">
+        <div class="eyebrow">👋 About Me</div>
+        <p class="reveal">I write content that's built to do a job, not just fill a page.</p>
+        <p class="reveal">For the past few years, I've worked as a freelance content writer helping e-commerce brands and small businesses turn ideas into SEO-ready blog posts, product pages, and brand stories. My approach is simple: research the topic properly, write like a human talking to another human, and structure everything so both readers and search engines can follow it.</p>
+        <p class="reveal">Outside of client work, I run a couple of niche web tools of my own — including a gaming mouse DPI analyzer and an astrology calculator site — which means I don't just write about SEO and user experience, I actually build and test it on my own projects too.</p>
+        <div class="pill-row reveal">
+          <span class="pill">📝 SEO Blog Writing</span>
+          <span class="pill">🛍️ E-commerce Content</span>
+          <span class="pill">🎙️ Brand Storytelling</span>
+          <span class="pill">🧭 Article Outlines</span>
+          <span class="pill">🏷️ Product Descriptions</span>
+          <span class="pill">⚙️ WordPress</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">🛠️ What I Do</div>
+      <h2>Content built around one goal: results. 🎯</h2>
+      <p>Four core services, each written with a clear reader and a clear purpose in mind — no fluff, no filler.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="tag">01</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 19.5V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v13.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <h3>📝 SEO Blog Writing</h3>
+        <p>Keyword-aware blog posts structured to rank — built around real search intent, not stuffed phrases.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="tag">02</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 6h18l-1.5 9.5a2 2 0 0 1-2 1.5H6.5a2 2 0 0 1-2-1.5L3 6Z"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><circle cx="9" cy="20" r="1"/><circle cx="15" cy="20" r="1"/></svg></div>
+        <h3>🛍️ E-commerce Content</h3>
+        <p>Product descriptions and buying guides that explain benefits clearly and quietly nudge toward a purchase.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="tag">03</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"/></svg></div>
+        <h3>🎙️ Brand Storytelling</h3>
+        <p>About pages and brand narratives that build trust by sounding human, not like a press release.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="tag">04</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.4"/><circle cx="4.5" cy="12" r="1.4"/><circle cx="4.5" cy="18" r="1.4"/></svg></div>
+        <h3>🧭 Article Outlines &amp; Strategy</h3>
+        <p>Detailed outlines and content briefs that keep client teams aligned before a single word is drafted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK / SAMPLES ============ -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">📚 Writing Samples</div>
+      <h2>Don't take my word for it — read the work. 👇</h2>
+      <p>Every sample below is a complete, full-length writing sample, not a snippet. Click any card to read it in full.</p>
+    </div>
+
+    <div class="filter-row reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="seo">SEO Blog</button>
+      <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+      <button class="filter-btn" data-filter="brand">Brand Story</button>
+      <button class="filter-btn" data-filter="guide">Buying Guide</button>
+    </div>
+
+    <div class="samples-grid">
+      <div class="sample-card reveal" data-cat="seo" data-article="a1">
+        <span class="sample-cat">📝 SEO Blog Writing</span>
+        <h3>5 Wall Art Styling Tips That Instantly Upgrade Any Room</h3>
+        <p>A home-decor SEO blog post built around real styling questions people search for — written to rank and to actually help.</p>
+        <div class="sample-meta"><span>~800 words</span><span class="read">Read full sample <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+
+      <div class="sample-card reveal" data-cat="ecommerce" data-article="a2">
+        <span class="sample-cat">🛍️ E-commerce Content</span>
+        <h3>DPI Settings Explained: Picking the Right Mouse Sensitivity</h3>
+        <p>A gaming-gear buying guide that breaks down a technical spec into something a non-expert reader can actually use.</p>
+        <div class="sample-meta"><span>~800 words</span><span class="read">Read full sample <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+
+      <div class="sample-card reveal" data-cat="brand" data-article="a3">
+        <span class="sample-cat">🎙️ Brand Storytelling</span>
+        <h3>Our Story: Why We Started Crafting Wall Art for Real Homes</h3>
+        <p>A sample brand "About" narrative for a fictional home-decor brand — built to sound human, not corporate.</p>
+        <div class="sample-meta"><span>~800 words</span><span class="read">Read full sample <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+
+      <div class="sample-card reveal" data-cat="guide" data-article="a4">
+        <span class="sample-cat">🔮 Buying / Beginner Guide</span>
+        <h3>Sun, Moon &amp; Rising Sign: A Beginner's Guide to Your Birth Chart</h3>
+        <p>An educational guide written for a niche astrology calculator site, simplifying a confusing topic for first-time readers.</p>
+        <div class="sample-meta"><span>~800 words</span><span class="read">Read full sample <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIDE PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">🚀 Side Projects</div>
+      <h2>I don't just write about the web. I build on it too.</h2>
+      <p>Two niche tools I designed, built, and wrote the content for end-to-end — proof I understand the product, not just the prose.</p>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card p1 reveal">
+        <div class="blob"></div>
+        <h3>🖱️ Mouse DPI Analyzer</h3>
+        <p>A niche calculator site for gamers, helping them test and understand mouse sensitivity settings — built with SEO content and on-page schema from the ground up.</p>
+        <a href="#" class="link">Replace with live link <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="proj-card p2 reveal">
+        <div class="blob"></div>
+        <h3>🔮 Sun / Moon / Rising Calculator</h3>
+        <p>A WordPress-based astrology tool with custom HTML calculators, written and optimized for a beginner audience exploring birth charts for the first time.</p>
+        <a href="#" class="link">Replace with live link <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">🔁 How I Work</div>
+      <h2>A simple process, no surprises.</h2>
+    </div>
+    <div class="process-row">
+      <div class="process-step reveal">
+        <div class="tag">STEP 01 🔍</div>
+        <h3>🔍 Brief & Research</h3>
+        <p>We talk through the topic, audience, and goal. I research the niche properly before writing a single word.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="tag">STEP 02 📋</div>
+        <h3>📋 Outline & Draft</h3>
+        <p>I share a structured outline first, then write the full draft once it's approved — no surprises mid-way.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="tag">STEP 03 ✨</div>
+        <h3>✨ Polish & Deliver</h3>
+        <p>A self-edit pass for tone, clarity, and SEO, then delivery in the format you need — docx, Google Docs, or CMS-ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <div class="glow"></div>
+      <div class="contact-left">
+        <div class="eyebrow">📩 Get In Touch</div>
+        <h2>Got content that needs to work harder? 🚀</h2>
+        <p>Tell me a bit about the project — topic, niche, and deadline — and I'll get back to you within 24 hours.</p>
+        <div class="contact-direct">
+          <a href="mailto:bloggingtips78@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M4 6h16v12H4V6Z"/><path d="m4 6 8 7 8-7"/></svg> bloggingtips78@gmail.com</a>
+          <a href="https://wa.me/923177514326" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M21 11.5a8.5 8.5 0 1 1-4.4-7.4"/><path d="M21 11.5 12 12l1-9"/></svg> WhatsApp Me</a>
+          <a href="https://www.linkedin.com/in/rana-noman-haider/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 1 1 4 0v3M12 11v5"/></svg> LinkedIn Profile</a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form id="contactForm">
+          <div class="form-field">
+            <label>Your Name</label>
+            <input type="text" required placeholder="e.g. Sarah Khan">
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" required placeholder="you@company.com">
+          </div>
+          <div class="form-field">
+            <label>Project Details</label>
+            <textarea required placeholder="Tell me about the content you need..."></textarea>
+          </div>
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <span class="form-note">Opens your email app</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <p>✍️ © 2026 Noman Haider. Built &amp; written by hand, not a template.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/rana-noman-haider/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 1 1 4 0v3M12 11v5"/></svg></a>
+      <a href="mailto:bloggingtips78@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M4 6h16v12H4V6Z"/><path d="m4 6 8 7 8-7"/></svg></a>
+      <a href="https://wa.me/923177514326" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M21 11.5a8.5 8.5 0 1 1-4.4-7.4"/><path d="M21 11.5 12 12l1-9"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- HIDDEN ARTICLE TEMPLATES -->
+<div style="display:none;">
+
+  <div id="article-a1" class="article-data" data-cat="📝 SEO Blog Writing" data-title="5 Wall Art Styling Tips That Instantly Upgrade Any Room" data-wc="~800 words">
+    <div class="article-body">
+      <p>Staring at a blank wall? You're not alone. Most people buy furniture first and figure out the walls later — and that's exactly why so many rooms feel unfinished. The good news is that styling wall art isn't about expensive pieces or a perfect eye. It's about a few simple habits that make any space feel intentional.</p>
+      <p>Here's the short version: get the size right, group pieces with a plan, work with your existing colors, mix in some texture, and give your art room to breathe. Let's go through each one.</p>
+      <h4>Start With Size, Not Style</h4>
+      <p>The biggest mistake people make is choosing art they love without checking if it fits the wall. A small frame on a large wall looks lost. A huge canvas in a tiny hallway feels cramped before you even step inside.</p>
+      <p>A simple rule to follow: your art, or art grouping, should cover roughly 60 to 75% of the available wall width above a piece of furniture, like a sofa or console table. If you're hanging something solo above a bed, aim for about two-thirds the width of the headboard.</p>
+      <p>Before you buy anything, tape paper cutouts to the wall in the size you're considering. Live with it for a day or two. You'll know almost instantly if it works.</p>
+      <h4>Group With a Plan, Not by Accident</h4>
+      <p>Gallery walls look effortless, but the good ones are planned. Frames scattered without any spacing rules just look cluttered, no matter how nice each piece is on its own.</p>
+      <p>Try this: lay your pieces out on the floor first. Keep two to three inches between frames for a tight, gallery feel, or four to six inches for something more relaxed. Pick one anchor piece, usually the largest, and build the rest of the layout around it instead of treating every frame as equally important.</p>
+      <p>If odd groupings feel risky, stick to even grids instead. They're harder to get wrong and still look polished in almost any room.</p>
+      <h4>Let Your Existing Colors Lead</h4>
+      <p>You don't need art that matches your sofa exactly. That often looks too matched, almost like a showroom display. Instead, pull one or two colors already present in the room, a cushion, a rug, a lamp, and look for art that echoes them, even subtly.</p>
+      <p>Neutral, muted tones are a safe bet for most rooms because they let the furniture and decor stay the main focus. Bold, saturated pieces tend to work best as a single statement rather than scattered across several walls.</p>
+      <h4>Mix Textures and Mediums</h4>
+      <p>A room filled with only framed prints can start to feel flat after a while. Mixing in different formats, canvas, framed prints, even a small textile hanging, adds depth without adding visual clutter.</p>
+      <p>This doesn't mean every wall needs five different mediums at once. Often, just two is enough: a larger framed print paired with one smaller, textured piece nearby creates contrast without the wall feeling busy.</p>
+      <h4>Give Your Art Room to Breathe</h4>
+      <p>Empty space around a piece of art isn't wasted space. It's actually what makes the art noticeable in the first place. Crowding a wall with too many pieces too close together can make even great art disappear into the noise around it.</p>
+      <p>A general guide for hanging height: the center of your artwork should sit around 57 to 60 inches from the floor, which is roughly eye level for most adults. Above furniture, leave about six to eight inches between the top of the piece and the bottom of the frame.</p>
+      <h4>Don't Forget Lighting</h4>
+      <p>Even well-chosen art can fall flat under the wrong lighting. A small picture light or a nearby floor lamp angled toward the wall can make colors and textures pop in a way that overhead lighting alone often misses.</p>
+      <p>If you're working with natural light, pay attention to where direct sun hits the wall during the day. Strong, direct sunlight can fade certain prints over time, so a slightly shadier wall is often the safer long-term choice for your favorite pieces.</p>
+      <h4>Putting It Together</h4>
+      <p>Styling wall art is less about chasing trends and more about a few consistent habits: measure before you buy, plan your spacing, lean on the colors already in the room, mix in some texture, and don't be afraid of empty space.</p>
+      <p>Start with just one wall. Once it feels right, the rest of the room tends to follow naturally, because once you understand the rules, your eye starts doing the rest of the work for you.</p>
+    </div>
+  </div>
+
+  <div id="article-a2" class="article-data" data-cat="🛍️ E-commerce Content" data-title="DPI Settings Explained: Picking the Right Mouse Sensitivity" data-wc="~800 words">
+    <div class="article-body">
+      <p>If you've ever bought a new gaming mouse and immediately cranked the DPI to the highest number on the box, you're not alone, and you're probably making your aim worse, not better.</p>
+      <p>DPI, or dots per inch, decides how far your cursor moves on screen for every inch you move the mouse physically. Higher DPI means more cursor movement per inch. Lower DPI means less. That's really it. The confusing part is that "higher" doesn't automatically mean "better," no matter what the marketing on the box suggests.</p>
+      <h4>What DPI Actually Controls</h4>
+      <p>Think of DPI as sensitivity, not power. A mouse set to 800 DPI needs a bigger physical hand movement to cross the screen than one set to 3200 DPI. Neither setting is more accurate on its own. Accuracy comes from matching the DPI to how you actually play.</p>
+      <p>Competitive players in precision-based games often prefer lower DPI, somewhere between 400 and 800, paired with a higher in-game sensitivity multiplier. This setup rewards larger arm movements, which tend to be more consistent than tiny wrist flicks when you're trying to land a precise shot.</p>
+      <p>Players in faster-paced games, or those working with a smaller desk space, often lean toward 800 to 1600 DPI instead. It's a comfortable middle ground that doesn't demand huge arm swings but still allows enough control for fine aiming.</p>
+      <h4>Why Maxing Out DPI Usually Backfires</h4>
+      <p>Most gaming mice today support DPI numbers in the tens of thousands. That number looks impressive on a spec sheet, but very few players actually use anywhere close to it in real gameplay.</p>
+      <p>At extremely high DPI, even a tiny, accidental hand movement sends your cursor flying across the screen. Your brain ends up fighting against that oversensitivity instead of focusing on the game itself. Many players who switch to a lower DPI report feeling like the game suddenly "clicked," not because the mouse changed, but because their aim finally became predictable.</p>
+      <p>There's also a technical reason to stay cautious with very high settings. Not every sensor performs cleanly at its maximum rated DPI. Some sensors show more jitter or angle snapping near the top of their range, even if the chip technically supports it. Checking sensor reviews for the real "clean" range is worth a few minutes if competitive accuracy matters to you.</p>
+      <h4>Finding Your Personal Sweet Spot</h4>
+      <p>There's no single correct DPI for everyone, but there is a simple way to find your own.</p>
+      <p>Start at 800 DPI. Spend a session just moving around, no aiming drills yet, just getting used to how far your hand needs to travel to cross the screen. Then nudge it up in small steps, around 100 to 200 at a time, until the cursor speed feels natural for the size of movement you're comfortable making.</p>
+      <p>The eDPI number, your DPI multiplied by your in-game sensitivity, is a useful way to compare setups across different games. It's also the right way to copy a pro player's settings accurately, rather than just copying their raw DPI number, which means very little without knowing their in-game multiplier too.</p>
+      <h4>Desk Space Matters More Than You'd Think</h4>
+      <p>Your DPI choice isn't only about preference. It's also about how much physical desk space you're working with. A low DPI setup paired with a small mouse pad can force you to make movements that run out of room before you finish a turn.</p>
+      <p>If you're tight on desk space, a slightly higher DPI can compensate for the limited pad area without forcing you into the oversensitivity problems mentioned earlier. It's a balance, not a fixed rule everyone has to follow exactly.</p>
+      <h4>Testing Beats Guessing</h4>
+      <p>Specs and forum recommendations are a starting point, not a final answer. The only real way to know your ideal DPI is to test it in the games you actually play, under the conditions you actually play in.</p>
+      <p>Polling rate, sensor type, and even your desk surface all interact with DPI in small ways. A setting that feels perfect on a hard mouse pad can feel slightly different on a cloth one. It's worth testing for a week instead of relying on a single session, since muscle memory takes a few days to fully adjust to any change.</p>
+      <p>Once you find a setting that feels invisible, where you're not thinking about the mouse at all, you've found your number. That's really the goal here: a DPI setting you forget about completely while you're focused on the game in front of you.</p>
+    </div>
+  </div>
+
+  <div id="article-a3" class="article-data" data-cat="🎙️ Brand Storytelling (Sample Brand)" data-title="Our Story: Why We Started Crafting Wall Art for Real Homes" data-wc="~800 words">
+    <div class="article-body">
+      <p>Every brand story starts somewhere ordinary, and ours did too: a rented apartment with bare white walls that never quite felt like home.</p>
+      <p>That feeling, the apartment that looks fine but doesn't feel like anyone lives there, is what got this whole idea started. We weren't interior designers. We were just a small group of people who kept noticing the same thing in our own homes and in our friends' homes: furniture got plenty of attention, but walls were always an afterthought.</p>
+      <h4>Where It Began</h4>
+      <p>It started small, a handful of prints made for our own apartments, shared with a few friends who asked where we'd bought them. We hadn't bought them anywhere. We'd made them ourselves, mostly out of frustration with how expensive and impersonal most wall art felt at the time.</p>
+      <p>Big retail options were either generic, the kind of art you'd see in ten other apartments on the same street, or priced like something you'd hang in a gallery, not your living room. We wanted something in between: art that felt considered, without needing an interior design budget to actually afford it.</p>
+      <p>So we kept making more. What started as prints for our own walls slowly turned into something other people genuinely wanted too.</p>
+      <h4>What We Believe About Walls</h4>
+      <p>We think a wall says more about a home than people usually give it credit for. A couch is a couch. A coffee table is a coffee table. But what's on the wall, that's usually the one thing in a room that's actually a choice, not just a need.</p>
+      <p>That's why we never wanted to be a print factory churning out whatever trend is popular this month. Every piece we add to our collection goes through the same question: would we actually want to live with this on our own wall? If the answer isn't a clear yes, it doesn't make the cut.</p>
+      <h4>Built Around How People Actually Decorate</h4>
+      <p>Most people don't decorate all at once. They add a piece here, swap something out there, and slowly build a home over months or years, not a single weekend.</p>
+      <p>We designed our collections with that in mind. Pieces are grouped so they work well individually or together, so you're never stuck needing to buy four matching prints just to make one corner look finished. Whether you're filling your first apartment or finally finishing a room you've lived in for years, there's a way in that doesn't require redoing everything you already own.</p>
+      <h4>Quality We're Willing to Stand Behind</h4>
+      <p>We've seen too many wall art pieces that look great in a product photo and disappointing in person: thin paper, colors that fade within months, frames that warp in normal humidity.</p>
+      <p>We test materials the way we'd want a customer to test them: hang a piece in a real room, under real light, for real weeks, not just a quick photoshoot. If something doesn't hold up the way we'd want it to in our own homes, it doesn't go out under our name.</p>
+      <h4>Still a Small Team, On Purpose</h4>
+      <p>We've stayed smaller than we probably could have grown, on purpose. It's easier to keep quality consistent and actually read the messages people send us asking for help choosing a piece, instead of becoming a brand that just ships boxes and hopes for the best.</p>
+      <p>That's also why customer photos matter so much to us. Seeing our prints in someone else's home, styled in a way we never would have thought of ourselves, is honestly still the best part of doing this.</p>
+      <h4>Where We're Headed</h4>
+      <p>We're not trying to be the biggest wall art brand out there. We're trying to be the one people actually trust when they're staring at a blank wall and don't know where to start.</p>
+      <p>If that sounds like the kind of brand you'd want decorating your own home, we'd love to have you with us. Every piece you choose helps a small, independent team keep doing exactly what got us started in the first place: making walls feel like home.</p>
+    </div>
+  </div>
+
+  <div id="article-a4" class="article-data" data-cat="🔮 Buying / Beginner Guide" data-title="Sun, Moon &amp; Rising Sign: A Beginner's Guide to Your Birth Chart" data-wc="~800 words">
+    <div class="article-body">
+      <p>If you only know one thing about astrology, it's probably your sun sign. But your sun sign is just one piece of a much bigger picture, and if you've ever felt like your "sign" doesn't fully describe you, that's exactly why.</p>
+      <p>Your full birth chart, sometimes called a natal chart, is a snapshot of where the sun, moon, and planets were positioned at the exact moment you were born. Three of those positions matter most for beginners: your sun sign, your moon sign, and your rising sign. Together, people often call these your "big three."</p>
+      <h4>Your Sun Sign: The Core of Who You Are</h4>
+      <p>This is the sign most people already know, based on birth date alone. It represents your core identity, the traits you'd probably use to describe yourself if someone asked, and the general energy you bring into the world.</p>
+      <p>Think of the sun sign as your headline, not your whole story. It's accurate, but it's incomplete on its own, which is exactly why two people born on the same day can still feel like they have very different personalities.</p>
+      <h4>Your Moon Sign: Your Inner, Emotional Self</h4>
+      <p>Your moon sign needs your exact birth time, not just your date, because the moon moves through a sign roughly every two and a half days.</p>
+      <p>While your sun sign reflects how you show up outwardly, your moon sign reflects how you process emotions privately, what makes you feel safe, and what you actually need, not just want, when you're stressed. Many people find their moon sign feels more personally accurate than their sun sign, because it touches on instincts they rarely show other people.</p>
+      <p>For example, someone with their sun in a bold, outgoing sign might still have a moon sign that craves quiet and predictability behind closed doors. That contrast is normal, and it's exactly what makes a full chart more useful than a single sign ever could be.</p>
+      <h4>Your Rising Sign: How Others Experience You</h4>
+      <p>Your rising sign, also called your ascendant, is based on the exact time and location of your birth. It changes roughly every two hours, which is why even people born on the same day in the same city can have completely different rising signs.</p>
+      <p>This sign is often described as your "mask," the first impression you give people, your instinctive reactions, and even some aspects of your physical presence or style. It's the layer most strangers meet first, before they ever get close enough to see your sun or moon sign underneath.</p>
+      <h4>Why You Need an Exact Birth Time</h4>
+      <p>Calculating your moon and rising sign accurately requires your birth time down to the hour, ideally the minute. A difference of even thirty minutes can shift your rising sign into a completely different sign, especially around the hours when one sign is transitioning into the next.</p>
+      <p>If you don't know your exact time, a birth certificate or hospital record is usually the most reliable source. Family memory, "around lunchtime, I think," is better than nothing, but it can still land you in the wrong sign if the transition happened close to that window.</p>
+      <h4>Putting the Big Three Together</h4>
+      <p>Once you know all three, the picture usually starts making more sense than any single sign ever could. A practical way to think about it: your sun sign is what you're like, your moon sign is what you feel, and your rising sign is how you come across.</p>
+      <p>People who feel like "my sign doesn't describe me at all" are very often comparing their full personality to just their sun sign, while their moon and rising are quietly shaping traits they assumed weren't part of their "sign" at all.</p>
+      <h4>Where to Go From Here</h4>
+      <p>A free birth chart calculator, using your birth date, time, and location, is the easiest way to get all three placements accurately without learning to calculate planetary positions by hand. Once you have your big three, you've got a real foundation, the same starting point most beginners use before going deeper into houses, aspects, or planetary placements.</p>
+      <p>Astrology rewards patience more than instant answers. Start with the big three, sit with what feels accurate and what doesn't, and let the rest of the chart fill in slowly from there.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast">Message ready — opening your email app</div>
+
+<script>
+  // ===== Header scroll state =====
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // ===== Mobile menu =====
+  const burger = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  document.querySelectorAll('.mlink').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // ===== Scroll reveal =====
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach((el, i) => {
+    el.style.transitionDelay = (i % 4) * 70 + 'ms';
+    observer.observe(el);
+  });
+
+  // ===== Counter animation =====
+  const counters = document.querySelectorAll('.counter');
+  let countersStarted = false;
+  function animateCounters() {
+    if (countersStarted) return;
+    countersStarted = true;
+    counters.forEach(counter => {
+      const target = parseInt(counter.dataset.target, 10);
+      let current = 0;
+      const step = Math.max(1, Math.ceil(target / 40));
+      const tick = () => {
+        current += step;
+        if (current >= target) {
+          counter.textContent = target;
+        } else {
+          counter.textContent = current;
+          requestAnimationFrame(tick);
+        }
+      };
+      tick();
+    });
+  }
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        heroObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  const statRow = document.querySelector('.stat-row');
+  if (statRow) heroObserver.observe(statRow);
+
+  // ===== Typewriter effect =====
+  const typeTarget = document.getElementById('typeTarget');
+  const phrases = [
+    'SEO blog post for a home decor brand...',
+    'Product description for a gadget store...',
+    'Brand story for a small business...',
+    'Article outline for a client review...'
+  ];
+  let pIndex = 0, charIndex = 0, deleting = false;
+  function typeLoop() {
+    const current = phrases[pIndex];
+    if (!deleting) {
+      charIndex++;
+      typeTarget.textContent = current.slice(0, charIndex);
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(typeLoop, 1600);
+        return;
+      }
+    } else {
+      charIndex--;
+      typeTarget.textContent = current.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        pIndex = (pIndex + 1) % phrases.length;
+      }
+    }
+    setTimeout(typeLoop, deleting ? 28 : 45);
+  }
+  typeLoop();
+
+  // ===== Filter samples =====
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const sampleCards = document.querySelectorAll('.sample-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      sampleCards.forEach(card => {
+        const show = filter === 'all' || card.dataset.cat === filter;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+
+  // ===== Modal =====
+  const modalBackdrop = document.getElementById('modalBackdrop');
+  const modalContent = document.getElementById('modalContent');
+  const modalClose = document.getElementById('modalClose');
+
+  function openArticle(id) {
+    const source = document.getElementById('article-' + id);
+    if (!source) return;
+    const cat = source.dataset.cat;
+    const title = source.dataset.title;
+    const wc = source.dataset.wc;
+    modalContent.innerHTML =
+      '<div class="modal-cat">' + cat + '</div>' +
+      '<h2>' + title + '</h2>' +
+      '<div class="modal-wc">' + wc + ' · Writing Sample</div>' +
+      source.querySelector('.article-body').outerHTML;
+    modalBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modalBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  sampleCards.forEach(card => {
+    card.addEventListener('click', () => openArticle(card.dataset.article));
+  });
+  modalClose.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // ===== Contact form (mailto fallback) =====
+  const contactForm = document.getElementById('contactForm');
+  const toast = document.getElementById('toast');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const inputs = contactForm.querySelectorAll('input, textarea');
+    const name = inputs[0].value, email = inputs[1].value, msg = inputs[2].value;
+    const subject = encodeURIComponent('Project Inquiry from ' + name);
+    const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2600);
+    window.location.href = 'mailto:bloggingtips78@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
